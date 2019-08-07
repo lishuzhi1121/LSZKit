@@ -7,6 +7,7 @@
 //
 
 #import "LSZKit.h"
+#import <UIKit/UIKit.h>
 
 @implementation LSZKit
 
@@ -21,6 +22,13 @@
 
 - (void)sayHello {
     NSLog(@"Hello, world!");
+}
+
+- (NSString *)getInfo {
+    NSString *name = [UIDevice currentDevice].name;
+    NSString *sysName = [UIDevice currentDevice].systemName;
+    NSString *ver = [UIDevice currentDevice].systemVersion;
+    return [NSString stringWithFormat:@"%@-%@-%@", name, sysName, ver];
 }
 
 @end
