@@ -24,6 +24,8 @@
 		B10A07B422FA88F300D602BE /* LSZKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B10A07B322FA88F300D602BE /* LSZKit.m */; };
 		B10A07B622FA896800D602BE /* LSZKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B10A07B222FA88F300D602BE /* LSZKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B14EABFD22FBF48A00ED3AAD /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14EABFC22FBF48A00ED3AAD /* MOBFoundation.framework */; };
+		B14EAC2522FC03FB00ED3AAD /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14EAC2422FC03FB00ED3AAD /* JavaScriptCore.framework */; };
+		B14EAC2722FC040200ED3AAD /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B14EAC2622FC040200ED3AAD /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		B10A07B222FA88F300D602BE /* LSZKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSZKit.h; sourceTree = "<group>"; };
 		B10A07B322FA88F300D602BE /* LSZKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSZKit.m; sourceTree = "<group>"; };
 		B14EABFC22FBF48A00ED3AAD /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MOBFoundation.framework; path = ../../SDK/MOBFoundation.framework; sourceTree = "<group>"; };
+		B14EAC2422FC03FB00ED3AAD /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		B14EAC2622FC040200ED3AAD /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B14EAC2722FC040200ED3AAD /* libsqlite3.tbd in Frameworks */,
+				B14EAC2522FC03FB00ED3AAD /* JavaScriptCore.framework in Frameworks */,
 				B14EABFD22FBF48A00ED3AAD /* MOBFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +59,7 @@
 			children = (
 				B10A07A722FA873E00D602BE /* LSZKit */,
 				B10A07A622FA873E00D602BE /* Products */,
+				B14EAC2322FC03FB00ED3AAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +82,15 @@
 				B10A07B322FA88F300D602BE /* LSZKit.m */,
 			);
 			path = LSZKit;
+			sourceTree = "<group>";
+		};
+		B14EAC2322FC03FB00ED3AAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B14EAC2622FC040200ED3AAD /* libsqlite3.tbd */,
+				B14EAC2422FC03FB00ED3AAD /* JavaScriptCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,7 +325,7 @@
 				DEVELOPMENT_TEAM = LW5266U92D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/LSZKit",
+					"$(PROJECT_DIR)/../SDK/**",
 				);
 				INFOPLIST_FILE = LSZKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
@@ -333,7 +349,7 @@
 				DEVELOPMENT_TEAM = LW5266U92D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/LSZKit",
+					"$(PROJECT_DIR)/../SDK/**",
 				);
 				INFOPLIST_FILE = LSZKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";

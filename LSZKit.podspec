@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 	s.name                = "LSZKit"
-	s.version             = "1.0.5"
+	s.version             = "1.0.6"
 	s.summary             = 'LSZKit'
 	s.license             = 'Copyright © 2012-2017 sandslee.com'
 	s.author              = { "lishuzhi1121" => "lishuzhi1121@163.com" }
