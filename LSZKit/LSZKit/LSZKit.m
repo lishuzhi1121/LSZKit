@@ -8,6 +8,7 @@
 
 #import "LSZKit.h"
 #import <UIKit/UIKit.h>
+#import <MOBFoundation/MOBFoundation.h>
 
 @implementation LSZKit
 
@@ -29,6 +30,12 @@
     NSString *sysName = [UIDevice currentDevice].systemName;
     NSString *ver = [UIDevice currentDevice].systemVersion;
     return [NSString stringWithFormat:@"%@-%@-%@", name, sysName, ver];
+}
+
+- (NSString *)getDeviceInfoFromFoundation {
+    NSString *deviceModel = [MOBFDevice deviceModel];
+    NSString *carrierName = [MOBFDevice carrierName];
+    return [NSString stringWithFormat:@"%@-%@", deviceModel, carrierName];
 }
 
 @end

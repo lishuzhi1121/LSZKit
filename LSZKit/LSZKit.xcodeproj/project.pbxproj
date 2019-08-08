@@ -23,6 +23,7 @@
 /* Begin PBXBuildFile section */
 		B10A07B422FA88F300D602BE /* LSZKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B10A07B322FA88F300D602BE /* LSZKit.m */; };
 		B10A07B622FA896800D602BE /* LSZKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B10A07B222FA88F300D602BE /* LSZKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B14EABF822FBD7E200ED3AAD /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14EABF722FBD7E200ED3AAD /* MOBFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B10A07B022FA877500D602BE /* FMWKConfig-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "FMWKConfig-Debug.xcconfig"; sourceTree = "<group>"; };
 		B10A07B222FA88F300D602BE /* LSZKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSZKit.h; sourceTree = "<group>"; };
 		B10A07B322FA88F300D602BE /* LSZKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSZKit.m; sourceTree = "<group>"; };
+		B14EABF722FBD7E200ED3AAD /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B14EABF822FBD7E200ED3AAD /* MOBFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +67,7 @@
 		B10A07A722FA873E00D602BE /* LSZKit */ = {
 			isa = PBXGroup;
 			children = (
+				B14EABF722FBD7E200ED3AAD /* MOBFoundation.framework */,
 				B10A07AE22FA876E00D602BE /* FMWKConfig-Release.xcconfig */,
 				B10A07B022FA877500D602BE /* FMWKConfig-Debug.xcconfig */,
 				B10A07A822FA873E00D602BE /* Info.plist */,
@@ -303,6 +307,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = LW5266U92D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LSZKit",
+				);
 				INFOPLIST_FILE = LSZKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -323,6 +331,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = LW5266U92D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LSZKit",
+				);
 				INFOPLIST_FILE = LSZKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
